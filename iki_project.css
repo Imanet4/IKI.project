@@ -1,141 +1,125 @@
 
-
-body{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container{
-  line-height: 1.4;
-  width: 80%;
-  max-width: 1400px;
-  margin: 0 auto;
-  
-
+body {
+  line-height: 1.6;
 }
 
-
-/* Top Text Section */
-
-.text-content{
-  
-}
-
-/* MS-Section*/
-
-
-.text1{
-  width: 100%;
-  grid-column: 2/4;
-  grid-row: 1/2;
-  
-}
-h2{
-  font-size: 2.5em;
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-
-.btn{
-  border: 1px solid blue;
-  font-size: 0.9rem;
-  padding: 10px 40px;
-  border-radius: 20px;
-  color: white;
-  background-color:rgb(74, 110, 252) ;
+/* grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60% 60%;
+  gap: 5px;
 }
 
-a{
-  text-decoration: none;
+.hero-content {
+  padding-left: 4rem;
 }
 
-/* Featured texts */
-
-h3{
-  font-size: 0.9rem;
-}
-.featured-text1 p, .featured-text2 p{
-  font-size: 0.9rem;
-  color: gray;
-  width: 80%;
-  
+h1 {
+  font-size: 2.9rem;
+  margin-bottom: 1rem;
+  color: black;
 }
 
-.featured-text1{
-  grid-column: 2/3;
-  grid-row: 2/3;
-  color: rgb(84, 82, 82);
+p {
+  margin-bottom: 1rem;
+  color:gray;
+  font-size: 90%;
 }
 
-.featured-text2{
-  grid-column: 3/4;
-  grid-row: 2/3;
-  color: rgb(84, 82, 82);
-}
-
-/*Image section*/
-
-.featured-image{
-  width: 40%;
-  height: auto;
-  
-}
-
-img{
-  width: AUTO;
-  height: auto;
-  grid-column: 4/5;
-  grid-row: 2/4;
-  
-}
-
-/*Testimonial Section*/
-/*
-.testimonial{
-  border: 1px solid rgb(74, 110, 252);
+/* Button */
+.btn {
+  display: inline-block;
   background-color: rgb(74, 110, 252);
   color: white;
-  max-width: 95.3%;
-  border-radius: 30px;
-  position: absolute;
-  bottom: 0.1vh;
-  margin-bottom: 20px;
+  padding: 1% 9%;
+  border-radius: 2em;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Features section */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  color: black;
+}
+
+.image-container{
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  z-index: 1;
+}
+
+/* Testimonial section */
+.testimonial {
+  grid-column: 1 / 3;
+  max-height: 60%;
+  background-color: rgb(74, 110, 252);
+  color: white;
+  padding: 2rem;
+  border-radius: 50px;
+}
+
+.testimonial-content p {
+  color: white;
+  max-width: 40%;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
   
 }
 
-.author-comment {
-  max-width: 40%;
-  padding: 20px 0 0 35px ;
-}
-.rating{
-  color: rgb(255, 255, 255);
-  justify-self: right;
-  height: 10vh;
-
-}
-
-.left{
-  display: block;
-}
-
-h6{
-  font-size: 0.9em;
-  display: inline;
-
-}
-
-.left img{
+.author-img{
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
-}
+  max-width: 80%;
  
+}
+
+.author-img img{
+  max-width: 90%;
+  border-radius: 50%;
+  
+}
+.author-name {
+  font-weight: 500;
+}
+
+.rating {
+  display: flex;
+  justify-self: flex-end;
+  color: white;
+}
 
 /*Sell-Around the world- Section*/
-/*
-hr{
-  margin-top: 12%;
-}
-
-/*
-.stats-container {
+.section2 {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: repeat(1, 200px) ;
@@ -174,10 +158,10 @@ hr{
 
 
 /*Grid Cards*/
-/*
+
 .cards-container{ 
   display: flex;
-  gap: 20px;
+  gap: 15px;
   justify-content: center;
   align-content: center;
   margin-top: 40px;
@@ -186,8 +170,8 @@ hr{
 .card{
   border: 2px solid black;
   border-radius: 10%;
-  max-width: 335px;
-  height: 300px;
+  max-width: 24rem;
+  height: auto;
   padding: 25px;
   flex: 1;
   
@@ -209,6 +193,7 @@ h4{
 
 .learn-more a{
   color: black;
+  text-decoration: none;
   }
 
   .learn-more{
@@ -217,17 +202,17 @@ h4{
 
   /*CTA section*/
 
-/*
+
 .cta-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1140px;
+  max-width: 80%;
   width: 100%;
   border-radius: 40px;
-  padding: 60px;
+  padding: 50px;
   border: 2px solid black;
-  margin: 60px;
+  margin: 1.5em;
   justify-self: center;
 }
 
@@ -236,14 +221,13 @@ h4{
   max-width: 45%;
 }
 
-.cta-text h1 {
-  font-size: 24px;
-  font-weight: 600;
+.cta-text h2 {
+  font-size: 1.8em;
   margin: 0;
   line-height: 1.3;
 }
 
-.final-right {
+.btn-right {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,13 +240,13 @@ h4{
   border: none;
   border-radius: 25px;
   padding: 12px 40px;
-  font-size: 20px;
-  font-weight: 100;
+  font-size: 1em;;
   
 }
 
 .action-btn a{
   color: black;
+  text-decoration: none;
 }
 
 
@@ -272,3 +256,270 @@ h4{
   color: #777;
 }
 
+
+
+
+/* 1200 MAX-WIDTH MEDIA- Big tablet*/
+
+@media (max-width: 1200px) {
+  
+  h1{
+    font-size: 2em;
+  }
+  .container{
+    max-width: 90%;
+  }
+  .image-container{
+    display: none;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .hero-content{
+    padding: 0;
+    place-items: center;
+  }
+
+  .hero{
+    justify-items: center;
+    max-width: 80%;
+    justify-content: center;
+  }
+  .btn{
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px gray;
+  }
+
+  .features-grid{
+    max-width:70% ;
+
+  }
+  .feature{
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px rgb(98, 98, 210);
+  }
+
+.testimonial{
+  max-width: 70%;
+  max-height: 90%;
+  display: grid;
+  justify-self: center;
+  
+}
+.testimonial-content p{
+  max-width: 90%;
+  text-align: center;
+}
+
+.section2{
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 60%;
+  border: 1px solid gray;
+  box-shadow: 0 2px 10px rgb(74, 110, 252);
+}
+.grid-left h2{
+  font-size: 1.5em;
+  text-align: center;
+  max-width: 100%;
+}
+.grid-left{
+  max-width: 100%;
+}
+.grid-left p{
+  text-align: center;
+  max-width: 100%;
+}
+.stat-number{
+  font-size: 50px;
+  color: rgb(74, 110, 252);
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 12px;
+  
+}
+
+.card {
+  max-width: 250px;
+  min-width: 320px;
+  padding: 20px;
+  border: 1px solid gray;
+  box-shadow: 0 2px 10px rgb(74, 110, 252);
+  
+}
+
+h4 {
+  font-size: 120%;
+  color: rgb(74, 110, 252);
+}
+
+.icon {
+  width: 20%;
+  
+}
+.learn-more a {
+  text-decoration: none;
+}
+
+.cta-section {
+  max-width: 85%;
+  padding: 40px;
+  border-radius: 35px;
+  border: 1px solid gray;
+  box-shadow: 0 2px 10px rgb(74, 110, 252);
+}
+
+.cta-text {
+  max-width: 50%;
+}
+
+.cta-text h2 {
+  font-size: 1.6em;
+}
+
+.action-btn {
+  padding: 10px 35px;
+  font-size: 0.95em;
+}
+
+.btn-text {
+  font-size: 1.5rem;
+}
+
+
+}
+
+/* Small devices - 767 */
+
+@media (max-width: 767px){
+  h1{
+    font-size: 1.5em;
+  }
+  .hero p{
+    text-align: center;
+  }
+
+  .features-grid{
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+  }
+
+  .testimonial-content p{
+    justify-self: center;
+  }
+
+  div .testimonial-author{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+  }
+
+  .testimonial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section2{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 0;
+    max-width: 100%;
+  }
+  .grid-left h2{
+    font-size: 1em;
+    text-align: center;
+    
+  }
+  .grid-left{
+    max-width: 100%;
+  }
+  .grid-left p{
+    text-align: center;
+    max-width: 100%;
+  }
+  .stat-number{
+    font-size: 50px;
+    text-align: center;
+    color:rgb(74, 110, 252);
+  }
+  .stats{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+    align-items: center;
+  }
+  
+  .card {
+    max-width: 80%;
+    width: 80%;
+    padding: 20px 15px;
+    border-radius: 20px;
+  }
+  
+  h4 {
+    font-size: 110%;
+    text-align: center;
+    color: rgb(74, 110, 252);
+
+  }
+  
+  .card p {
+    text-align: center;
+  }
+  
+  .icon {
+    width: 15%;
+    display: block;
+    margin: 0 auto 15px auto;
+  }
+  
+  .learn-more {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .cta-section {
+    flex-direction: column;
+    max-width: 90%;
+    padding: 30px 20px;
+    border-radius: 25px;
+    
+    gap: 25px;
+  }
+  
+  .cta-text {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .cta-text h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+  
+  .btn-right {
+    width: 100%;
+  }
+  
+  .action-btn {
+    width: 80%;
+    max-width: 190px;
+    padding: 12px;
+  }
+}
