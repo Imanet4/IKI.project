@@ -174,7 +174,6 @@ p {
   height: auto;
   padding: 25px;
   flex: 1;
-  
 }
 
 .card p{
@@ -207,7 +206,7 @@ h4{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 80%;
+  max-width: 80%; /*///////////////////////////////////////////////*/
   width: 100%;
   border-radius: 40px;
   padding: 50px;
@@ -455,7 +454,6 @@ h4 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    
   }
 
   .cards-container {
